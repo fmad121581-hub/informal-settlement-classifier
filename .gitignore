@@ -1,0 +1,17 @@
+data/raw/
+data/processed/
+*.tif
+*.TIF
+*.jp2
+*.zip
+*.gpkg
+*.shp
+*.dbf
+*.shx
+*.prj
+*.cpg
+*.joblib
+*.qgz
+__pycache__/
+*.pyc
+audit.py
