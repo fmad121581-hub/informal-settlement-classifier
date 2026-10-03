@@ -159,23 +159,31 @@ informal_wards = [
 # ── FORMAL anchor areas (label = 1) ──────────────────────────────────────────
 # Source: RAJUK Master Plan, planned residential/commercial zones
 
+# NOTE (fix, Sep 2026): GADM NAME_4 for this dataset is just "Ward No-XX" —
+# it holds no neighbourhood names. Dhanmondi / Motijheel / Tejgaon DO exist,
+# but as NAME_3 (thana) values, so they belong in formal_thanas, not
+# formal_wards, or they never match anything. "Banani" and "Nikunja" are not
+# present as thana names in this GADM layer (they fall inside Gulshan
+# thana), so matching them here was always a no-op; kept only as a comment
+# for future reference in case a finer boundary layer is used.
+# Bashundhara / Baridhara / Niketan / DOHS / "Uttara Model Town" are
+# neighbourhood-level names with no match at either NAME_3 or NAME_4 in
+# GADM level 4 — they cannot be recovered from this admin layer at all.
+
 formal_thanas = [
     "Gulshan",         # planned diplomatic/commercial
-    "Banani",          # planned residential (often grouped with Gulshan thana)
     "Uttara",          # planned satellite town
     "Cantonment",      # military cantonment — planned, regulated
-    "Nikunja",         # planned residential
+    "Dhanmondi",       # planned residential zone (was mislabeled as a ward name)
+    "Motijheel",       # CBD, commercial (was mislabeled as a ward name)
+    "Tejgaon",         # industrial but planned (was mislabeled as a ward name)
 ]
 
 formal_wards = [
-    "Dhanmondi",       # planned residential zone
-    "Motijheel",       # CBD, commercial
-    "Tejgaon",         # industrial but planned
-    "Bashundhara",     # planned residential
-    "Baridhara",       # planned diplomatic zone
-    "Niketan",         # planned residential
-    "DOHS",            # Defence Officers Housing Society — fully planned
-    "Uttara Model Town", # planned
+    # Kept empty deliberately: no neighbourhood-level formal anchor name
+    # (Bashundhara, Baridhara, Niketan, DOHS, Banani, Nikunja, "Uttara Model
+    # Town") matches anything in GADM level 4 NAME_3 or NAME_4 for this
+    # study area. See note above.
 ]
 
 # ── Apply thana-level labels ──────────────────────────────────────────────────
@@ -348,7 +356,7 @@ gdf[save_cols].to_csv(OUT_LABELS, index=False)
 print(f"  [SAVED] {OUT_LABELS}")
 
 # GeoPackage — with geometry for mapping
-gdf.to_file(OUT_LABELED, driver="GPKG")
+gdf.to_file(OUT_LABELED, driver="GPKG", layer="ward_labeled", OVERWRITE="YES")
 print(f"  [SAVED] {OUT_LABELED}")
 
 

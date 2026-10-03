@@ -1,0 +1,38 @@
+======================================================================
+PER-CLASS METRICS & CONFUSION MATRIX (out-of-fold predictions)
+======================================================================
+
+Labeled wards: 170  (formal=109, informal=61)
+
+Reference (12 feat, circular) | RANDOM
+  Accuracy=0.8706  Balanced accuracy=0.8558  Macro-F1=0.8583  MCC=0.7169
+  Confusion matrix [rows=true, cols=pred; order=Informal,Formal]:
+    [49, 12]
+    [10, 99]
+  Informal (0)    precision=0.8305  recall=0.8033  f1=0.8167  support=61
+  Formal (1)      precision=0.8919  recall=0.9083  f1=0.9000  support=109
+
+Reference (12 feat, circular) | THANA-GROUP
+  Accuracy=0.8235  Balanced accuracy=0.8046  Macro-F1=0.8068  MCC=0.6139
+  Confusion matrix [rows=true, cols=pred; order=Informal,Formal]:
+    [45, 16]
+    [14, 95]
+  Informal (0)    precision=0.7627  recall=0.7377  f1=0.7500  support=61
+  Formal (1)      precision=0.8559  recall=0.8716  f1=0.8636  support=109
+
+Decoupled (7 feat) | RANDOM
+  Accuracy=0.8588  Balanced accuracy=0.8466  Macro-F1=0.8466  MCC=0.6932
+  Confusion matrix [rows=true, cols=pred; order=Informal,Formal]:
+    [49, 12]
+    [12, 97]
+  Informal (0)    precision=0.8033  recall=0.8033  f1=0.8033  support=61
+  Formal (1)      precision=0.8899  recall=0.8899  f1=0.8899  support=109
+
+Decoupled (7 feat) | THANA-GROUP
+  Accuracy=0.8412  Balanced accuracy=0.8220  Macro-F1=0.8255  MCC=0.6515
+  Confusion matrix [rows=true, cols=pred; order=Informal,Formal]:
+    [46, 15]
+    [12, 97]
+  Informal (0)    precision=0.7931  recall=0.7541  f1=0.7731  support=61
+  Formal (1)      precision=0.8661  recall=0.8899  f1=0.8778  support=109
+

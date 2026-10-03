@@ -1,0 +1,22 @@
+======================================================================
+EXTERNAL VALIDATION — EO4SD-Urban Dhaka Informal Settlements 2017
+======================================================================
+
+EO4SD polygons: 1624
+Wards with any EO4SD informal area: 132 / 203
+
+EO4SD informal fraction by training label (label 0=informal, 1=formal):
+                 mean    median       std  count
+label                                           
+informal(0)  0.110176  0.056078  0.145199     61
+formal(1)    0.025996  0.000000  0.048716    109
+
+Point-biserial correlation (label vs EO4SD informal fraction): r=-0.3926, p=1.192e-07
+(Expect r < 0: formal=1 wards should have LOWER EO4SD informal fraction)
+Threshold 0.01: agreement=0.729  informal-precision=0.584  informal-recall=0.852
+Threshold 0.05: agreement=0.676  informal-precision=0.554  informal-recall=0.508
+Threshold 0.10: agreement=0.724  informal-precision=0.733  informal-recall=0.361
+
+Model predicted probability vs EO4SD informal fraction (n=203):
+  Pearson  r=0.4495, p=1.726e-11
+  Spearman r=0.5628, p=2.366e-18

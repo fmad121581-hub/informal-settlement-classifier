@@ -1,0 +1,36 @@
+HUMAN LABEL AUDIT -- COHEN'S KAPPA REPORT (FINAL, n=40)
+======================================================================
+Methodology: 40-ward stratified sample (10 each from rule:formal,
+rule:informal, thana:informal_anchor, thana:formal_anchor), independently
+visually classified from Google Maps satellite imagery by the author,
+blind to the rule/anchor label. Judgment made per-ward in isolation
+(not by comparison against other wards). One ward (Kalindi) was dropped
+and replaced with a fresh, never-reviewed ward after its original
+judgment was potentially compromised by an answer being named in the
+course of discussion; its replacement was rated with no information
+about the correct answer.
+
+RESULT
+------
+n                 : 40
+Raw agreement     : 0.725 (72.5%)
+Cohen's kappa     : 0.450  -- "moderate" agreement (Landis & Koch 1977 scale)
+
+Confusion matrix (rows=human judgment, cols=rule/anchor label):
+                  rule=informal   rule=formal
+human=informal               16             7
+human=formal                  4            13
+
+INTERPRETATION
+--------------
+Moderate agreement (kappa=0.45) between independent visual judgment and
+the rule/anchor labeling pipeline. This is weaker than "substantial"
+but clearly better than chance, and supports the labels as a reasonable
+(not perfect) ground truth. The residual disagreement is informative in
+itself: of 11 total disagreements, slightly more are
+human=informal/rule=formal (7) than the reverse (4), suggesting a mild
+tendency for the rule/anchor-formal class to include some
+visually-ambiguous or peri-urban wards. This should be reported in the
+manuscript as an honest limitation alongside the headline validation
+results (external EO4SD correlation, spatial CV, ablation), not
+presented as a stronger result than it is.

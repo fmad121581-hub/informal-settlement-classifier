@@ -4,48 +4,48 @@ Dhaka Informal Settlement Classifier
 ============================================================
 
 Features (12): ndvi_mean, savi_mean, ndbi_mean, lst_mean, slope_mean, pop_mean, pop_std, built_fraction, s2_ndbi_mean, s2_mndwi_mean, osm_building_density, osm_mean_building_area
-Training samples : 130
-Test samples     : 33
+Training samples : 136
+Test samples     : 34
 
 ============================================================
 MODEL COMPARISON — EXTENDED vs BASELINE
 ============================================================
 Model               Acc      F1     AUC     CV F1   vs Baseline
 ------------------------------------------------------------
-Random Forest    0.8485  0.8493  0.9500    0.9015  -0.0002
-XGBoost          0.9091  0.9096  0.9692    0.9321  -0.0123
-SVM              0.9091  0.9101  0.9846    0.9199  -0.0240
+Random Forest    0.8529  0.8557  0.9129    0.8520  -0.0497
+XGBoost          0.8824  0.8841  0.8939    0.8704  -0.0740
+SVM              0.9118  0.9134  0.8977    0.8834  -0.0605
 
-BEST MODEL: XGBoost
-  CV F1  : 0.9321 ± 0.0409
-  Acc    : 0.9091
-  AUC    : 0.9692
+BEST MODEL: SVM
+  CV F1  : 0.8834 ± 0.0478
+  Acc    : 0.9118
+  AUC    : 0.8977
 
 ============================================================
 CLASSIFICATION REPORT
 ============================================================
               precision    recall  f1-score   support
 
-    Informal       0.86      0.92      0.89        13
-      Formal       0.95      0.90      0.92        20
+    Informal       0.80      1.00      0.89        12
+      Formal       1.00      0.86      0.93        22
 
-    accuracy                           0.91        33
-   macro avg       0.90      0.91      0.91        33
-weighted avg       0.91      0.91      0.91        33
+    accuracy                           0.91        34
+   macro avg       0.90      0.93      0.91        34
+weighted avg       0.93      0.91      0.91        34
 
 
 ============================================================
 FEATURE IMPORTANCE (XGBoost)
 ============================================================
-  NDVI (Landsat)                : 0.3474
-  NDBI proxy (Landsat)          : 0.1505
-  LST °C                        : 0.1207
-  SAVI (Landsat)                : 0.1003
-  Built-up fraction             : 0.0817
-  Pop density                   : 0.0514
-  OSM Build. density ★          : 0.0410 ★ NEW
-  OSM Mean bldg area ★          : 0.0274 ★ NEW
-  S2 True NDBI ★                : 0.0267 ★ NEW
-  Slope °                       : 0.0256
-  S2 MNDWI ★                    : 0.0148 ★ NEW
-  Pop std dev                   : 0.0125
+  NDBI proxy (Landsat)          : 0.2708
+  OSM Build. density ★          : 0.2092 ★ NEW
+  Built-up fraction             : 0.1149
+  SAVI (Landsat)                : 0.0841
+  Pop density                   : 0.0565
+  NDVI (Landsat)                : 0.0563
+  LST °C                        : 0.0553
+  Slope °                       : 0.0435
+  OSM Mean bldg area ★          : 0.0390 ★ NEW
+  S2 True NDBI ★                : 0.0277 ★ NEW
+  Pop std dev                   : 0.0230
+  S2 MNDWI ★                    : 0.0197 ★ NEW

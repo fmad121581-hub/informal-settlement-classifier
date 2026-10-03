@@ -1,0 +1,23 @@
+======================================================================
+FEATURE ABLATION STUDY
+======================================================================
+
+Labeled wards: 170  (formal=109, informal=61)
+M1-M4 are cumulative and entirely rule-independent (non-circular).
+M5 (reference) includes the 5 rule-derived variables and is circular --
+shown only for context, not as a fair comparison point.
+
+Model Description                     #Feat        CV Accuracy       F1     External r
+-----------------------------------------------------------------------------------------------
+M1    Spectral/terrain core               2 0.8176 +/- 0.0193   0.8186  0.5557 (p=7.6e-18)
+M2    + population structure              3 0.8647 +/- 0.0386   0.8658  0.5839 (p=6e-20)
+M3    + Sentinel-2 indices                5 0.8412 +/- 0.0505   0.8432  0.6228 (p=3.4e-23)
+M4    + OSM building morphology           7 0.8588 +/- 0.0597   0.8591  0.6517 (p=6.3e-26)
+M5    Reference (CIRCULAR, incl. rule-derived)     12 0.8706 +/- 0.0601   0.8704  0.6387 (p=1.2e-24)
+
+Cumulative feature lists:
+  M1: ['savi_mean', 'slope_mean']
+  M2: ['savi_mean', 'slope_mean', 'pop_std']
+  M3: ['savi_mean', 'slope_mean', 'pop_std', 's2_ndbi_mean', 's2_mndwi_mean']
+  M4: ['savi_mean', 'slope_mean', 'pop_std', 's2_ndbi_mean', 's2_mndwi_mean', 'osm_building_density', 'osm_mean_building_area']
+  M5: ['ndvi_mean', 'savi_mean', 'ndbi_mean', 'lst_mean', 'slope_mean', 'pop_mean', 'pop_std', 'built_fraction', 's2_ndbi_mean', 's2_mndwi_mean', 'osm_building_density', 'osm_mean_building_area']

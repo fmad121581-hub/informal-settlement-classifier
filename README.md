@@ -17,19 +17,28 @@ This project classifies Dhaka's 203 administrative wards as **formal** or **info
 
 ## Key Results
 
-| Metric | Baseline Model (8 features) | Extended Model (12 features) |
-|--------|----------------------------|------------------------------|
-| Test Accuracy | 84.85% | **90.91%** |
-| CV F1 Score | 0.9444 ± 0.0237 | 0.9321 ± 0.0409 |
-| ROC-AUC | 0.9654 | **0.9692** |
-| Algorithm | XGBoost | XGBoost |
+**Headline numbers (re-run end to end, Oct 2026, `RANDOM_SEED=42`).** Labels are rule-derived for part of the sample, and some rule inputs are also model features (label-feature circularity). The headline therefore uses the *decoupled* model, which drops every rule-implicated feature.
 
-**Prediction Summary (Extended Model):**
-- High informal risk: 95 wards (46.8%)
-- Moderate informal risk: 2 wards (1.0%)
+| Evaluation | Accuracy (5-fold CV) | Majority baseline |
+|---|---|---|
+| **Decoupled model, 7 rule-independent features, n=170** (headline) | **85.3% ± 7.7%** | 64.1% |
+| Decoupled, thana-grouped CV | 84.2% | 64.1% |
+| Decoupled, spatial-block CV | 83.1% | 64.1% |
+| Decoupled, anchor-only labels (n=63, strictest) | 79.4% ± 11.5% | 68.3% |
+| Reference, 12 features (circular, context only) | 87.1% ± 6.9% | 64.1% |
+
+- External validation against EO4SD-Urban 2017 (independent inventory): Spearman r = **0.652** (decoupled) vs 0.639 (reference), n=203, p < 0.0001
+- Human label audit (40 wards, blind visual classification): Cohen's kappa = **0.45** (moderate), agreement 72.5%
+- See `paper_framing.md` and `notebooks/06`–`13` for the full validation work (spatial CV, ablation, per-class metrics, SHAP, agreement plot)
+
+**Earlier exploratory comparison (notebook 04b, single 80/20 split, n=34 test wards; not the headline).** Best model on that split was SVM, 91.2% accuracy, ROC-AUC 0.898. A split this small has a very wide uncertainty band, so use the cross-validated numbers above for any claim.
+
+**Prediction Summary (notebook 05b, extended model):**
+- High informal risk: 55 wards (27.1%)
+- Moderate informal risk: 31 wards (15.3%)
 - Low informal risk: 12 wards (5.9%)
-- Formal / planned: 94 wards (46.3%)
-- Both models agree on 198/203 wards (97.5%)
+- Formal / planned: 105 wards (51.7%)
+- Baseline and extended models agree on 181/203 wards (89.2%)
 
 ---
 

@@ -1,0 +1,81 @@
+======================================================================
+DECOUPLED / HONEST MODEL EVALUATION
+======================================================================
+
+Rule-derived features excluded in decoupled tests: ['built_fraction', 'ndvi_mean', 'pop_mean', 'lst_mean', 'ndbi_mean']
+Decoupled feature set (7): ['savi_mean', 'slope_mean', 'pop_std', 's2_ndbi_mean', 's2_mndwi_mean', 'osm_building_density', 'osm_mean_building_area']
+
+----------------------------------------------------------------------
+TEST 0 (reference) — original 12 features, all labeled wards
+n=170  formal=109  informal=61
+features=['ndvi_mean', 'savi_mean', 'ndbi_mean', 'lst_mean', 'slope_mean', 'pop_mean', 'pop_std', 'built_fraction', 's2_ndbi_mean', 's2_mndwi_mean', 'osm_building_density', 'osm_mean_building_area']
+CV Accuracy : 0.8706 +/- 0.0686  (95% CI +/- 0.0601)
+CV F1       : 0.8704 +/- 0.0676
+CV AUC      : 0.9384 +/- 0.0359
+Feature importances:
+  osm_building_density         0.1832
+  built_fraction               0.1738
+  savi_mean                    0.1434
+  ndbi_mean                    0.1176
+  ndvi_mean                    0.0806
+  lst_mean                     0.0751
+  osm_mean_building_area       0.0526
+  pop_mean                     0.0516
+  slope_mean                   0.0462
+  s2_ndbi_mean                 0.0288
+  pop_std                      0.0252
+  s2_mndwi_mean                0.0219
+
+----------------------------------------------------------------------
+TEST A — decoupled features, all labeled wards
+n=170  formal=109  informal=61
+features=['savi_mean', 'slope_mean', 'pop_std', 's2_ndbi_mean', 's2_mndwi_mean', 'osm_building_density', 'osm_mean_building_area']
+CV Accuracy : 0.8529 +/- 0.0767  (95% CI +/- 0.0672)
+CV F1       : 0.8534 +/- 0.0744
+CV AUC      : 0.9309 +/- 0.0320
+Feature importances:
+  osm_building_density         0.3804
+  savi_mean                    0.2549
+  s2_ndbi_mean                 0.0944
+  osm_mean_building_area       0.0892
+  slope_mean                   0.0821
+  pop_std                      0.0548
+  s2_mndwi_mean                0.0441
+
+----------------------------------------------------------------------
+TEST B — original 12 features, anchor-only labels
+n=63  formal=20  informal=43
+features=['ndvi_mean', 'savi_mean', 'ndbi_mean', 'lst_mean', 'slope_mean', 'pop_mean', 'pop_std', 'built_fraction', 's2_ndbi_mean', 's2_mndwi_mean', 'osm_building_density', 'osm_mean_building_area']
+CV Accuracy : 0.7615 +/- 0.0848  (95% CI +/- 0.0743)
+CV F1       : 0.7527 +/- 0.0905
+CV AUC      : 0.8049 +/- 0.1444
+Feature importances:
+  osm_mean_building_area       0.3492
+  slope_mean                   0.0923
+  ndvi_mean                    0.0726
+  s2_ndbi_mean                 0.0719
+  pop_std                      0.0711
+  pop_mean                     0.0670
+  osm_building_density         0.0571
+  savi_mean                    0.0540
+  built_fraction               0.0536
+  lst_mean                     0.0392
+  ndbi_mean                    0.0360
+  s2_mndwi_mean                0.0358
+
+----------------------------------------------------------------------
+TEST C — decoupled features, anchor-only labels (strictest)
+n=63  formal=20  informal=43
+features=['savi_mean', 'slope_mean', 'pop_std', 's2_ndbi_mean', 's2_mndwi_mean', 'osm_building_density', 'osm_mean_building_area']
+CV Accuracy : 0.7936 +/- 0.1154  (95% CI +/- 0.1012)
+CV F1       : 0.7838 +/- 0.1209
+CV AUC      : 0.8507 +/- 0.1380
+Feature importances:
+  osm_mean_building_area       0.4018
+  slope_mean                   0.1405
+  pop_std                      0.1065
+  savi_mean                    0.1015
+  osm_building_density         0.0991
+  s2_ndbi_mean                 0.0797
+  s2_mndwi_mean                0.0708
+

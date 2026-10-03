@@ -1,0 +1,41 @@
+sample_id,NAME_4,NAME_3,GID_4,label,label_src,true_label
+W01,Ward No-13,Mirpur,BGD.3.1.26.4_1,0,rule:informal,informal
+W02,Ward No-27,Sabujbagh,BGD.3.1.35.3_1,0,rule:informal,informal
+W03,Ward No-69,Bangshal,BGD.3.1.3.5_1,0,rule:informal,informal
+W04,Ward No-46 (Part),Hazaribagh,BGD.3.1.15.1_1,0,thana:informal_anchor,informal
+W05,Savar Paurashava,Savar,BGD.3.1.36.10_1,1,rule:formal,formal
+W06,Ward No-30,Sabujbagh,BGD.3.1.35.6_1,0,rule:informal,informal
+W07,Ward No-38 (Part),Tejgaon Ind. Area,BGD.3.1.42.3_1,1,thana:formal_anchor,formal
+W08,Ward No-89,Kadamtali,BGD.3.1.17.5_1,0,thana:informal_anchor,informal
+W09,Ward No-19,Gulshan,BGD.3.1.14.2_1,1,thana:formal_anchor,formal
+W10,Ward No-53,Ramna,BGD.3.1.33.1_1,1,rule:formal,formal
+W11,Ward No-56 (Part),Lalbagh,BGD.3.1.25.1_1,0,thana:informal_anchor,informal
+W12,Kalindi,Keraniganj,BGD.3.1.21.5_1,1,rule:formal,formal
+W13,Ward No-05,Pallabi,BGD.3.1.31.3_1,0,rule:informal,informal
+W14,Ward No-18,Gulshan,BGD.3.1.14.1_1,1,thana:formal_anchor,formal
+W15,Ward No-48 (Part),Dhanmondi,BGD.3.1.11.2_1,1,thana:formal_anchor,formal
+W16,Bakshanagar,Nawabganj,BGD.3.1.29.2_1,1,rule:formal,formal
+W17,Ward No-63 (Part),Bangshal,BGD.3.1.3.1_1,0,rule:informal,informal
+W18,Ward No-71 (Part),Kotwali,BGD.3.1.24.2_1,0,thana:informal_anchor,informal
+W19,Dhamrai Paurashava,Dhamrai,BGD.3.1.10.7_1,1,rule:formal,formal
+W20,Ward No-39,Tejgaon,BGD.3.1.43.2_1,1,thana:formal_anchor,formal
+W21,Muksudpur,Dohar,BGD.3.1.12.5_1,1,rule:formal,formal
+W22,Ward No-12,Mirpur,BGD.3.1.26.3_1,0,rule:informal,informal
+W23,Pathalia(part),Savar,BGD.3.1.36.8_1,1,rule:formal,formal
+W24,Ward No-51(part),Mohammadpur,BGD.3.1.27.6_1,0,thana:informal_anchor,informal
+W25,Ward No-78,Sutrapur,BGD.3.1.41.4_1,0,thana:informal_anchor,informal
+W26,Ward No-10,Darus Salam,BGD.3.1.8.2_1,1,rule:formal,formal
+W27,Ward No-49,Dhanmondi,BGD.3.1.11.3_1,1,thana:formal_anchor,formal
+W28,Ward No-34,Motijheel,BGD.3.1.28.4_1,1,thana:formal_anchor,formal
+W29,Kalakopa,Nawabganj,BGD.3.1.29.11_1,1,rule:formal,formal
+W30,Ward No-20 (Part),Tejgaon Ind. Area,BGD.3.1.42.1_1,1,thana:formal_anchor,formal
+W31,Ward No-74,Sutrapur,BGD.3.1.41.1_1,0,thana:informal_anchor,informal
+W32,Ward No-20 (Part),Gulshan,BGD.3.1.14.3_1,1,thana:formal_anchor,formal
+W33,Ward No-43,Adabor,BGD.3.1.1.1_1,0,rule:informal,informal
+W34,Ward No-68 (Part),Kotwali,BGD.3.1.24.1_1,0,thana:informal_anchor,informal
+W35,Ward No-71 (Part),Bangshal,BGD.3.1.3.7_1,0,rule:informal,informal
+W36,Ward No-75,Sutrapur,BGD.3.1.41.2_1,0,thana:informal_anchor,informal
+W37,Kailail,Nawabganj,BGD.3.1.29.10_1,1,rule:formal,formal
+W38,Ward No-14 (part),Mirpur,BGD.3.1.26.5_1,0,rule:informal,informal
+W39,Ward No-45,Mohammadpur,BGD.3.1.27.3_1,0,thana:informal_anchor,informal
+W40,Ward No-98 (Rest. Area),Cantonment,BGD.3.1.5.2_1,1,thana:formal_anchor,formal

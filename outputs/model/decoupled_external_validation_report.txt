@@ -1,0 +1,12 @@
+======================================================================
+DECOUPLED MODEL x EXTERNAL VALIDATION (EO4SD 2017)
+======================================================================
+
+Reference model (12 features, rule-circular)
+  n=203  Pearson r=0.4299 (p=1.539e-10)   Spearman r=0.6387 (p=1.164e-24)
+
+Decoupled model (7 features, all 170 labeled wards)
+  n=203  Pearson r=0.4382 (p=6.224e-11)   Spearman r=0.6517 (p=6.345e-26)
+
+Decoupled model (7 features, 63 anchor-only wards) -- STRICTEST
+  n=203  Pearson r=0.1690 (p=0.01592)   Spearman r=0.0890 (p=0.2066)

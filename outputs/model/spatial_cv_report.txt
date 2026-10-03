@@ -1,0 +1,19 @@
+======================================================================
+SPATIAL CROSS-VALIDATION EVALUATION
+======================================================================
+
+Labeled wards: 170  (formal=109, informal=61)
+Thana groups: 41  |  Spatial blocks (KMeans): 8
+
+Model                               Scheme           Folds           Accuracy       F1                AUC
+---------------------------------------------------------------------------------------------------------
+Reference (12 feat, circular)       RANDOM               5 0.8706 +/- 0.0601   0.8704  0.9376 (5/5 folds)
+Reference (12 feat, circular)       THANA-GROUP          5 0.8243 +/- 0.0410   0.8213  0.9264 (5/5 folds)
+Reference (12 feat, circular)       SPATIAL-BLOCK        5 0.8676 +/- 0.0680   0.8862  0.8974 (3/5 folds)
+Decoupled (7 feat)                  RANDOM               5 0.8588 +/- 0.0597   0.8591  0.9294 (5/5 folds)
+Decoupled (7 feat)                  THANA-GROUP          5 0.8421 +/- 0.0394   0.8387  0.9220 (5/5 folds)
+Decoupled (7 feat)                  SPATIAL-BLOCK        5 0.8306 +/- 0.0970   0.8582  0.9005 (3/5 folds)
+
+Interpretation:
+  Reference (12 feat, circular): random->thana-group drop = +0.0463, random->spatial-block drop = +0.0030
+  Decoupled (7 feat): random->thana-group drop = +0.0167, random->spatial-block drop = +0.0282
