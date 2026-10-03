@@ -1,0 +1,5 @@
+Ward-level informal settlement map of Dhaka from free satellite and OSM data
+Label-feature circularity inflated accuracy to 90.9%; a decoupled test removes it
+Honest accuracy 85.3% vs 64.1% baseline; r=0.65 with an independent inventory
+Blind audit of 40 wards gave kappa 0.45, reported openly as a limitation
+Code and ward-level data are public and reproducible from a fixed seed
